@@ -1627,21 +1627,20 @@ footer strong {
 ========================= */
 
 .reveal {
-    opacity: 0;
-
-    transform: translateY(35px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.visible {
-    opacity: 1;
+.js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
 
+.js-enabled .reveal.visible {
+    opacity: 1;
     transform: translateY(0);
 }
-
 
 /* =========================
    RESPONSIVE
