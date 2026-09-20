@@ -334,6 +334,58 @@ function initialiseProjectForm() {
     });
 }
 
+function initialiseEmailPopup() {
+    const popup = document.getElementById("emailPopup");
+    const form = document.getElementById("emailPopupForm");
+    const input = document.getElementById("emailPopupInput");
+    const closeButton = document.getElementById("emailPopupClose");
+    const message = document.getElementById("emailPopupMessage");
+    const storageKey = "prodg-email-popup-seen";
+    if (!popup || !form || !input || !closeButton || !message) return;
+
+    let lastFocusedElement = null;
+    const hasSeenPopup = () => {
+        try { return sessionStorage.getItem(storageKey) === "true"; } catch { return false; }
+    };
+    const rememberPopup = () => {
+        try { sessionStorage.setItem(storageKey, "true"); } catch { /* Browsing remains available when storage is unavailable. */ }
+    };
+    const closePopup = () => {
+        if (popup.hidden) return;
+        popup.hidden = true;
+        document.body.classList.remove("modal-open");
+        rememberPopup();
+        if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+    };
+    const openPopup = () => {
+        if (hasSeenPopup()) return;
+        lastFocusedElement = document.activeElement;
+        popup.hidden = false;
+        document.body.classList.add("modal-open");
+        input.focus();
+    };
+
+    closeButton.addEventListener("click", closePopup);
+    popup.addEventListener("click", event => { if (event.target === popup) closePopup(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape" && !popup.hidden) closePopup(); });
+    input.addEventListener("input", () => { if (message.dataset.state === "error") message.textContent = ""; });
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        if (!input.validity.valid) {
+            message.dataset.state = "error";
+            message.textContent = "Enter a valid email address to continue.";
+            input.focus();
+            return;
+        }
+        rememberPopup();
+        message.dataset.state = "success";
+        message.textContent = "Thanks. Your interest has been noted for this browser session; email delivery will be connected when the update service is available.";
+        form.querySelector('button[type="submit"]').disabled = true;
+        input.disabled = true;
+    });
+    window.setTimeout(openPopup, 350);
+}
+
 function initialiseApp() {
     document.documentElement.classList.add("js-enabled");
     initialiseMenu();
@@ -346,7 +398,11 @@ function initialiseApp() {
     initialiseCursorGlow();
     initialiseHeader();
     initialiseProjectForm();
-    enrichProjectsFromApi();
+    initialiseEmailPopup();
+    // The learning homepage uses the local catalogue directly. Avoid an
+    // unnecessary network request (and console warning) when no legacy
+    // project cards are present.
+    if (document.querySelector(".project-card")) enrichProjectsFromApi();
 }
 
 initialiseApp();

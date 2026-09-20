@@ -1,134 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ProDG Corp is a practical platform to learn new skills, build real projects, and grow a portfolio.">
-    <title>ProDG Corp | Learn, Build, Grow</title>
-    <meta name="theme-color" content="#05070a">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProDG is a practical learning platform for building skills, projects, and a portfolio."><meta name="theme-color" content="#05070a">
+  <title>ProDG | Learn, Build, Grow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
-<body class="learn-home">
-<a class="skip-link" href="#main-content">Skip to content</a>
-<div class="background-grid"></div><div class="noise"></div><div class="cursor-glow"></div>
-
-<header class="header">
-    <nav class="navbar">
-        <a href="index.html" class="logo" aria-label="ProDG Corp home"><span>ProDG</span><small>LEARN · BUILD</small></a>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">MENU</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="#learn">Learn</a></li>
-            <li><a href="#build">Build</a></li>
-            <li><a href="#rewards">Rewards</a></li>
-            <li><a href="about.html">About ProDG</a></li>
-        </ul>
-        <a class="nav-cta" href="#build">Explore projects <span>→</span></a>
-    </nav>
-</header>
-
+<body class="learn-home platform-home">
+<a class="skip-link" href="#main-content">Skip to content</a><div class="background-grid"></div><div class="noise"></div><div class="cursor-glow"></div>
+<header class="header"><nav class="navbar" aria-label="Primary navigation"><a href="index.html" class="logo" aria-label="ProDG home"><span>ProDG</span><small>LEARN &bull; BUILD</small></a><button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">MENU</button><ul class="nav-links" id="navLinks"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="#learn">Learn</a></li><li><a href="#build">Build</a></li><li><a href="#rewards">Rewards</a></li><li><a href="about.html">About ProDG</a></li></ul><a class="nav-cta" href="#build">Explore Projects <span>&rarr;</span></a></nav></header>
 <main id="main-content">
-    <section class="learn-hero">
-        <div class="learn-hero-copy reveal">
-            <p class="eyebrow">PRODG CORP <span>•</span> LEARN · BUILD · GROW</p>
-            <div class="learn-pill"><span></span> A platform for curious builders</div>
-            <h1>Learn it. Build it. <em>Grow from it.</em></h1>
-            <p class="learn-lead">Practical courses and real-world projects in one place — so every new skill can become something you are proud to show.</p>
-            <div class="hero-buttons">
-                <a class="btn btn-primary" href="#learn">Start learning <span>→</span></a>
-                <a class="btn btn-outline" href="#build">Explore projects</a>
-            </div>
-            <div class="learner-proof">
-                <div class="avatar-stack" aria-hidden="true"><b>J</b><b>M</b><b>A</b><b>+</b></div>
-                <p><strong>Learn • Build • Grow</strong><br>Skills with real momentum.</p>
-            </div>
-        </div>
-        <div class="hero-learning-card reveal" aria-label="Course progress preview">
-            <div class="hero-card-top"><span class="live-dot"></span><span>YOUR LEARNING SPACE</span><button type="button" aria-label="More options">•••</button></div>
-            <div class="hero-card-body">
-                <div class="code-orb"><span>&lt;/&gt;</span></div>
-                <p class="course-label">STARTER PATH</p><h2>Python foundations</h2>
-                <p>Understand the building blocks. Then make them useful.</p>
-                <div class="progress-heading"><span>Course progress</span><strong>68%</strong></div><div class="progress-bar"><i></i></div>
-                <div class="lesson-row"><span class="play-icon">▶</span><span><b>Next up</b><small>Working with functions</small></span><strong>12 min</strong></div>
-            </div>
-            <div class="floating-reward"><span>✦</span><div><b>+25 credits</b><small>Lesson complete</small></div></div>
-        </div>
-    </section>
-
-    <section class="learn-trust" aria-label="ProDG platform benefits">
-        <div><span>01</span><p><strong>Learn</strong>Courses, tutorials and useful videos.</p></div>
-        <div><span>02</span><p><strong>Build</strong>Turn knowledge into work you can share.</p></div>
-        <div><span>03</span><p><strong>Grow</strong>Earn credits and strengthen your portfolio.</p></div>
-    </section>
-
-    <section class="learn-section course-section" id="learn">
-        <span id="courses" aria-hidden="true"></span>
-        <div class="section-intro reveal"><div><p class="section-number">01 / LEARN</p><h2>Build skills with <span>real direction.</span></h2></div><p>Courses, tutorials and videos designed to give you a useful foundation — and an immediate next thing to make.</p></div>
-        <div class="course-grid">
-            <article class="course-card featured-course reveal"><div class="course-art art-python"><span class="art-grid"></span><b>Py</b><i>01</i></div><div class="course-content"><div class="card-meta"><span>BEGINNER</span><span>8 MODULES</span></div><h3>Python for problem solvers</h3><p>Get fluent in the language behind automation, data, AI and so much more.</p><div class="course-footer"><span>⌁ 6h 20m</span><a href="#courses">Explore <b>→</b></a></div></div></article>
-            <article class="course-card reveal"><div class="course-art art-java"><span class="art-grid"></span><b>J</b><i>02</i></div><div class="course-content"><div class="card-meta"><span>BEGINNER</span><span>10 MODULES</span></div><h3>Java essentials</h3><p>Learn to think in objects and create dependable applications.</p><div class="course-footer"><span>⌁ 7h 45m</span><a href="#courses">Explore <b>→</b></a></div></div></article>
-            <article class="course-card reveal"><div class="course-art art-c"><span class="art-grid"></span><b>C</b><i>03</i></div><div class="course-content"><div class="card-meta"><span>FUNDAMENTALS</span><span>9 MODULES</span></div><h3>C, from the ground up</h3><p>Understand how programs work closer to the machine.</p><div class="course-footer"><span>⌁ 6h 50m</span><a href="#courses">Explore <b>→</b></a></div></div></article>
-            <article class="course-card reveal"><div class="course-art art-cpp"><span class="art-grid"></span><b>C++</b><i>04</i></div><div class="course-content"><div class="card-meta"><span>INTERMEDIATE</span><span>12 MODULES</span></div><h3>Modern C++</h3><p>Level up with a language made for performance and possibility.</p><div class="course-footer"><span>⌁ 9h 10m</span><a href="#courses">Explore <b>→</b></a></div></div></article>
-        </div>
-        <a class="text-link reveal" href="#courses">View all learning paths <span>→</span></a>
-    </section>
-
-    <section class="video-section" id="videos">
-        <div class="learn-section"><div class="section-intro reveal"><div><p class="section-number">02 / TRENDING VIDEOS</p><h2>A quick spark of <span>inspiration.</span></h2></div><p>Short videos for the questions, concepts and little wins that keep your curiosity switched on.</p></div>
-            <div class="video-layout">
-                <a class="video-feature reveal" href="#videos"><div class="video-visual"><span class="video-code">print(<i>“hello, world”</i>)</span><span class="big-play">▶</span><span class="video-length">08:24</span></div><div class="video-copy"><span>PYTHON BASICS</span><h3>Why your first program matters more than you think</h3><p>Start with a simple idea and see where a few lines of code can take you.</p><b>Watch now →</b></div></a>
-                <div class="video-list reveal">
-                    <a href="#videos"><span class="mini-play">▶</span><div><small>JAVA · 05:18</small><h3>Objects, explained without the jargon</h3></div><b>→</b></a>
-                    <a href="#videos"><span class="mini-play">▶</span><div><small>CAREER · 07:42</small><h3>How to keep learning when life gets busy</h3></div><b>→</b></a>
-                    <a href="#videos"><span class="mini-play">▶</span><div><small>C++ · 10:05</small><h3>What makes C++ a language worth knowing?</h3></div><b>→</b></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="build-section" id="build">
-        <div class="learn-section">
-            <div class="section-intro reveal">
-                <div><p class="section-number">02 / BUILD</p><h2>Make work that <span>moves you forward.</span></h2></div>
-                <p>Use guided project ideas, source-code resources and practical briefs to turn new skills into a portfolio with substance.</p>
-            </div>
-            <div class="build-grid">
-                <article class="build-feature reveal">
-                    <div class="build-feature-art"><span>PROJECT<br>DROP</span><i>01</i><b>&lt;/&gt;</b></div>
-                    <div class="build-feature-copy">
-                        <p class="section-number">FEATURED PROJECT</p>
-                        <h3>Personal finance tracker</h3>
-                        <p>Create a useful web app with data, dashboards and a clean user experience — a solid portfolio piece from start to finish.</p>
-                        <div><span>PYTHON</span><span>WEB APP</span><span>BEGINNER+</span></div>
-                        <a href="#build">Open project brief <b>→</b></a>
-                    </div>
-                </article>
-                <div class="build-resource-list reveal">
-                    <a href="#build"><span class="resource-icon">◫</span><div><small>PROJECT IDEAS</small><h3>Find your next build</h3><p>Practical prompts for every stage of your journey.</p></div><b>→</b></a>
-                    <a href="#build"><span class="resource-icon">{ }</span><div><small>SOURCE RESOURCES</small><h3>Learn from real code</h3><p>Starter repos, GitHub resources and useful references.</p></div><b>→</b></a>
-                    <a href="#build"><span class="resource-icon">↗</span><div><small>PORTFOLIO PATH</small><h3>Show what you can do</h3><p>Shape projects into work that tells your story.</p></div><b>→</b></a>
-                </div>
-            </div>
-            <div class="build-metrics reveal">
-                <div><span>PROJECT IDEAS</span><b>40+</b><p>ready to shape into your own</p></div>
-                <div><span>CODE RESOURCES</span><b>Open</b><p>starter-friendly references</p></div>
-                <div><span>YOUR OUTCOME</span><b>Portfolio</b><p>proof of what you can build</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="learn-section rewards-section" id="rewards">
-        <div class="rewards-panel reveal"><div class="rewards-copy"><p class="section-number">03 / YOUR LEARNING REWARDS</p><h2>Keep learning.<br><span>Get something back.</span></h2><p>Every video watched and course milestone completed earns you ProDG credits. Save them up and use them for discounts on future courses.</p><a href="#courses" class="btn btn-primary">Start earning credits <span>→</span></a></div><div class="reward-steps"><div><span>01</span><i>▶</i><h3>Watch &amp; learn</h3><p>Earn credits as you finish videos and course lessons.</p></div><div><span>02</span><i>✦</i><h3>Build your balance</h3><p>See your progress add up with every completed milestone.</p></div><div><span>03</span><i>↘</i><h3>Use your rewards</h3><p>Apply credits for discounts on your next course.</p></div></div><div class="credit-chip"><span>✦</span><p><b>250</b><small>AVAILABLE CREDITS</small></p></div></div>
-    </section>
-    <section class="learn-cta reveal"><p>YOUR NEXT SKILL IS WAITING</p><h2>Make today the day<br>you <span>begin.</span></h2><a class="btn btn-primary" href="#courses">Explore courses <span>→</span></a></section>
+<section class="prodg-hero" aria-labelledby="hero-title"><div class="prodg-hero-copy reveal"><p class="prodg-kicker">PRODG LEARNING PLATFORM</p><h1 id="hero-title">Learn it. Build it. <span>Grow from it.</span></h1><p>Practical courses and real-world projects in one place &mdash; so every new skill can become something you are proud to show.</p><div class="prodg-actions"><a class="btn btn-primary" href="#learn">Start Learning <span>&rarr;</span></a><a class="btn btn-outline" href="#build">Explore Projects</a></div></div><div class="learning-preview reveal" aria-label="Preview of ProDG learning catalogue"><div class="preview-top"><span class="preview-mark"></span><span>PRODG / DISCOVER</span><span class="preview-status">COMING SOON</span></div><div class="preview-body"><p class="preview-overline">START WITH A SKILL</p><h2>Explore a path that leads somewhere.</h2><div class="preview-course"><span class="preview-icon">&lt;/&gt;</span><div><b>Python foundations</b><small>Course &middot; Beginner</small></div><span>&rarr;</span></div><div class="preview-course"><span class="preview-icon purple">{ }</span><div><b>Build a practical project</b><small>Project brief &middot; Portfolio</small></div><span>&rarr;</span></div></div><div class="preview-orbit orbit-one"></div><div class="preview-orbit orbit-two"></div></div></section>
+<section class="pillar-strip" aria-label="How ProDG works"><div><b>01</b><span>LEARN</span><p>Courses, tutorials and useful videos.</p></div><div><b>02</b><span>BUILD</span><p>Turn knowledge into real-world projects.</p></div><div><b>03</b><span>GROW</span><p>Earn future benefits through learning.</p></div></section>
+<section class="platform-section discovery-section" id="learn" aria-labelledby="learn-title"><div class="section-heading-platform reveal"><div><p class="prodg-kicker">01 / LEARN</p><h2 id="learn-title">Explore what you can learn</h2></div><p>Choose a foundation, follow your curiosity, then use it to make something useful.</p></div><div class="discovery-tools reveal" aria-label="Course discovery filters"><label>Search courses<input id="courseSearch" type="search" placeholder="Search courses, skills, or topics"></label><label>Level<select id="courseLevel"><option value="all">All levels</option><option value="beginner">Beginner</option><option value="fundamentals">Fundamentals</option><option value="intermediate">Intermediate</option></select></label><label>Category<select id="courseCategory"><option value="all">All categories</option><option>Python</option><option>Java</option><option>C</option><option>C++</option><option>JavaScript</option><option>TypeScript</option><option>Web Development</option><option>Automation Testing</option><option>API Testing</option><option>AI &amp; Machine Learning</option><option>Data Science</option></select></label></div><div class="catalogue-grid course-catalogue" id="courseCatalogue" aria-live="polite"><p class="catalogue-loading">Loading course catalogue&hellip;</p></div><p class="catalogue-empty" id="courseEmpty" hidden>No courses match those filters yet.</p></section>
+<section class="platform-section paths-section" aria-labelledby="paths-title"><div class="section-heading-platform reveal"><div><p class="prodg-kicker">LEARNING PATHS</p><h2 id="paths-title">Popular learning paths</h2></div><p>Clear, practical sequences designed to connect learning with a next project.</p></div><div class="path-grid"><article class="path-card reveal"><p>PYTHON</p><h3>Foundations <i>&rarr;</i> Projects</h3><span>Coming Soon</span></article><article class="path-card reveal"><p>JAVA</p><h3>Core Java <i>&rarr;</i> Automation</h3><span>Coming Soon</span></article><article class="path-card reveal"><p>JAVASCRIPT</p><h3>TypeScript <i>&rarr;</i> Playwright</h3><span>Coming Soon</span></article><article class="path-card reveal"><p>AI</p><h3>AI Tools <i>&rarr;</i> Automation</h3><span>Coming Soon</span></article></div></section>
+<section class="platform-section video-section-new" id="videos" aria-labelledby="videos-title"><div class="section-heading-platform reveal"><div><p class="prodg-kicker">WATCH &amp; LEARN</p><h2 id="videos-title">Trending learning videos</h2></div><p>Focused videos that make a single useful idea easier to understand.</p></div><div class="video-grid-new" id="videoCatalogue"><p class="catalogue-loading">Loading video catalogue&hellip;</p></div></section>
+<section class="platform-section build-section-new" id="build" aria-labelledby="build-title"><div class="section-heading-platform reveal"><div><p class="prodg-kicker">02 / BUILD</p><h2 id="build-title">Learn something. <span>Build something.</span></h2></div><p>Turn your knowledge into real-world projects that demonstrate what you can do.</p></div><div class="project-grid-new" id="projectCatalogue"><p class="catalogue-loading">Loading project catalogue&hellip;</p></div></section>
+<section class="platform-section journey-section" aria-labelledby="journey-title"><div class="journey-header reveal"><p class="prodg-kicker">THE PRODG APPROACH</p><h2 id="journey-title">Learn <span>&rarr;</span> Build <span>&rarr;</span> Grow</h2></div><div class="journey-grid"><article class="journey-step reveal"><b>01</b><h3>LEARN</h3><p>Courses, tutorials and useful videos.</p></article><article class="journey-step reveal"><b>02</b><h3>BUILD</h3><p>Turn knowledge into real-world projects.</p></article><article class="journey-step reveal"><b>03</b><h3>GROW</h3><p>Earn learning credits and unlock future benefits.</p></article></div></section>
+<section class="platform-section rewards-section-new" id="rewards" aria-labelledby="rewards-title"><div class="rewards-panel-new reveal"><div><p class="prodg-kicker">REWARDS / COMING SOON</p><h2 id="rewards-title">Learn more. <span>Earn more.</span></h2><p>ProDG Credits are planned as a simple way to recognise your learning and unlock future platform benefits.</p></div><div class="rewards-flow" aria-label="Future ProDG credit flow"><div>Watch / Complete Learning</div><i>&darr;</i><div>Earn ProDG Credits</div><i>&darr;</i><div>Unlock Benefits</div></div></div></section>
+<section class="platform-section why-section" aria-labelledby="why-title"><div class="section-heading-platform reveal"><div><p class="prodg-kicker">WHY PRODG</p><h2 id="why-title">Built for useful momentum</h2></div></div><div class="why-grid"><article class="why-card reveal"><h3>Practical learning</h3><p>Understand skills through useful, clear material.</p></article><article class="why-card reveal"><h3>Real-world projects</h3><p>Apply what you learn in work worth showing.</p></article><article class="why-card reveal"><h3>Learning credits</h3><p>Future rewards designed to support continued growth.</p></article><article class="why-card reveal"><h3>Portfolio focus</h3><p>Build evidence of your capability, not just knowledge.</p></article><article class="why-card reveal"><h3>Continuous growth</h3><p>Keep moving from one useful skill to the next.</p></article></div></section>
+<section class="final-cta-platform"><div class="reveal"><p class="prodg-kicker">START YOUR NEXT CHAPTER</p><h2>Your next skill can become your next project.</h2><p>Learn the skill. Build something real. Grow with ProDG.</p><div class="prodg-actions"><a class="btn btn-primary" href="#learn">Start Learning</a><a class="btn btn-outline" href="#build">Explore Projects</a></div></div></section>
 </main>
-<footer class="learn-footer"><a href="index.html" class="logo"><span>ProDG</span><small>LEARN</small></a><p>Practical skills for what’s next.</p><div><a href="services.html">ProDG Services</a><a href="contact.html">Contact</a><span>© 2026 ProDG Corp</span></div></footer>
-<script src="script.js"></script>
-<script src="catalog.js"></script>
-<script src="platform.js"></script>
-</body>
-</html>
+<footer class="platform-footer"><div class="footer-grid"><div><a href="index.html" class="logo"><span>ProDG</span><small>LEARN &bull; BUILD</small></a><p>Learn it. Build it. Grow from it.</p></div><div><b>Learn</b><a href="#learn">Courses</a><a href="#videos">Videos</a><a href="#rewards">Rewards</a></div><div><b>Build</b><a href="#build">Projects</a><a href="#build">Learning paths</a></div><div><b>Company</b><a href="about.html">About ProDG</a><a href="contact.html">Contact</a></div><div><b>Resources</b><a href="#learn">Courses</a><a href="#rewards">Rewards</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div></div><div class="footer-bottom"><span>&copy; 2026 ProDG Corp</span><span>Practical skills for what&rsquo;s next.</span></div></footer>
+<div class="email-popup" id="emailPopup" hidden>
+  <section class="email-popup-card" role="dialog" aria-modal="true" aria-labelledby="emailPopupTitle" aria-describedby="emailPopupDescription">
+    <button class="email-popup-close" id="emailPopupClose" type="button" aria-label="Close email updates popup">&times;</button>
+    <p class="prodg-kicker">PRODG LEARN UPDATES</p>
+    <h2 id="emailPopupTitle">Stay Updated with ProDG Learn</h2>
+    <p id="emailPopupDescription">Get updates about new courses, learning content, projects and upcoming opportunities.</p>
+    <form id="emailPopupForm" novalidate>
+      <label for="emailPopupInput">Email address</label>
+      <input id="emailPopupInput" name="email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+      <button class="btn btn-primary" type="submit">Keep Me Updated <span>&rarr;</span></button>
+      <p class="email-popup-message" id="emailPopupMessage" aria-live="polite"></p>
+    </form>
+  </section>
+</div>
+<script src="script.js"></script><script src="catalog.js"></script><script src="platform.js"></script>
+</body></html>
