@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Your ProDG learning dashboard. Continue learning, track your progress, and build projects."
+    >
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Dashboard | ProDG</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="prodg-dashboard">
+
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
+
+            <a href="index.html" class="dashboard-logo">
+                <strong>ProDG</strong>
+                <span>Learning Platform</span>
+            </a>
+
+            <div class="dashboard-nav-right">
+
+                <a href="index.html">Home</a>
+
+                <button
+                    class="profile-button"
+                    id="profileButton"
+                    type="button"
+                >
+                    <span
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        S
+                    </span>
+
+                    <span id="profileName">
+                        Student
+                    </span>
+
+                    <span class="profile-arrow">⌄</span>
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Welcome -->
+
+        <section class="dashboard-section dashboard-black">
+
+            <div class="dashboard-container">
+
+                <div class="welcome-layout">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">
+                            YOUR LEARNING SPACE
+                        </p>
+
+                        <h1 id="welcomeTitle">
+                            Welcome back.
+                        </h1>
+
+                        <p class="welcome-description">
+                            Continue learning, practise what you understand,
+                            and turn your knowledge into something you can build.
+                        </p>
+
+                    </div>
+
+                    <div class="streak-preview">
+
+                        <span class="streak-icon">🔥</span>
+
+                        <div>
+                            <strong id="currentStreak">
+                                0
+                            </strong>
+
+                            <span>
+                                day learning streak
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Continue Learning -->
+
+        <section class="dashboard-section dashboard-white">
+
+            <div class="dashboard-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="dashboard-eyebrow dark">
+                            CONTINUE YOUR LEARNING
+                        </p>
+
+                        <h2>
+                            Pick up where you left off.
+                        </h2>
+                    </div>
+
+                    <a href="index.html#learn" class="text-link">
+                        Explore courses →
+                    </a>
+
+                </div>
+
+
+                <article class="continue-card">
+
+                    <div class="course-number">
+                        01
+                    </div>
+
+                    <div class="continue-content">
+
+                        <p class="course-label">
+                            Python
+                        </p>
+
+                        <h3 id="continueCourse">
+                            Python for Problem Solvers
+                        </h3>
+
+                        <p>
+                            Build a strong programming foundation by
+                            understanding Python through practical problems.
+                        </p>
+
+                        <div class="progress-area">
+
+                            <div class="progress-information">
+                                <span>
+                                    Your progress
+                                </span>
+
+                                <strong id="courseProgress">
+                                    0%
+                                </strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-bar"
+                                    id="courseProgressBar"
+                                    style="width: 0%"
+                                ></div>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="detail.html?type=courses&id=python-problem-solvers"
+                            class="dashboard-button dark-button"
+                        >
+                            Continue learning →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Daily Activity -->
+
+        <section class="dashboard-section dashboard-grey">
+
+            <div class="dashboard-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow dark">
+                            YOUR DAILY ACTIVITY
+                        </p>
+
+                        <h2>
+                            Keep your learning habit alive.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-grid">
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            🔥
+                        </span>
+
+                        <strong id="streakNumber">
+                            0
+                        </strong>
+
+                        <h3>
+                            Current streak
+                        </h3>
+
+                        <p>
+                            Consecutive days on which you completed
+                            meaningful learning activity.
+                        </p>
+
+                    </article>
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            🏆
+                        </span>
+
+                        <strong id="longestStreak">
+                            0
+                        </strong>
+
+                        <h3>
+                            Longest streak
+                        </h3>
+
+                        <p>
+                            The highest number of consecutive learning
+                            days you have achieved.
+                        </p>
+
+                    </article>
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            ✓
+                        </span>
+
+                        <strong id="todayStatus">
+                            Not yet
+                        </strong>
+
+                        <h3>
+                            Today's learning
+                        </h3>
+
+                        <p id="todayMessage">
+                            Complete a lesson, exercise, quiz, or other
+                            qualifying activity today.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weekly Activity -->
+
+        <section class="dashboard-section dashboard-black">
+
+            <div class="dashboard-container">
+
+                <div class="section-heading light-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">
+                            THIS WEEK
+                        </p>
+
+                        <h2>
+                            Your learning activity.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        A simple view of your consistency over the last
+                        seven days.
+                    </p>
+
+                </div>
+
+
+                <div class="week-grid">
+
+                    <div class="day-item">
+                        <span>Mon</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Tue</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Wed</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Thu</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Fri</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Sat</span>
+                        <b>—</b>
+                    </div>
+
+                    <div class="day-item">
+                        <span>Sun</span>
+                        <b>—</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- My Learning -->
+
+        <section class="dashboard-section dashboard-white">
+
+            <div class="dashboard-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow dark">
+                            MY LEARNING
+                        </p>
+
+                        <h2>
+                            Everything you are working on.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-grid">
+
+                    <a href="index.html#learn" class="learning-card">
+
+                        <span>01</span>
+
+                        <h3>
+                            My courses
+                        </h3>
+
+                        <p>
+                            View the courses you have started and
+                            continue your lessons.
+                        </p>
+
+                        <b>Open courses →</b>
+
+                    </a>
+
+
+                    <a href="index.html#build" class="learning-card">
+
+                        <span>02</span>
+
+                        <h3>
+                            My projects
+                        </h3>
+
+                        <p>
+                            Build practical projects and create
+                            evidence of what you can do.
+                        </p>
+
+                        <b>View projects →</b>
+
+                    </a>
+
+
+                    <a href="#" class="learning-card">
+
+                        <span>03</span>
+
+                        <h3>
+                            My achievements
+                        </h3>
+
+                        <p>
+                            Track milestones you have reached
+                            through consistent learning.
+                        </p>
+
+                        <b>View achievements →</b>
+
+                    </a>
+
+
+                    <a href="#" class="learning-card">
+
+                        <span>04</span>
+
+                        <h3>
+                            My profile
+                        </h3>
+
+                        <p>
+                            Manage your name, profile information,
+                            learning preferences, and account.
+                        </p>
+
+                        <b>Open profile →</b>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Build -->
+
+        <section class="dashboard-section dashboard-grey">
+
+            <div class="dashboard-container">
+
+                <div class="build-callout">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow dark">
+                            TURN KNOWLEDGE INTO SOMETHING REAL
+                        </p>
+
+                        <h2>
+                            What will you build next?
+                        </h2>
+
+                        <p>
+                            ProDG is not only about completing courses.
+                            Use what you learn to create software,
+                            tools, experiments, and projects.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="index.html#build"
+                        class="dashboard-button dark-button"
+                    >
+                        Explore projects →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="dashboard-footer">
+
+        <div class="dashboard-container">
+
+            <div>
+                <strong>ProDG</strong>
+                <span>Learning Platform</span>
+            </div>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="index.html#learn">Courses</a>
+                <a href="index.html#build">Projects</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <p>
+                Learn through understanding. Build through practice.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

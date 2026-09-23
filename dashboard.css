@@ -1,0 +1,518 @@
+:root {
+    --black: #050505;
+    --white: #ffffff;
+    --grey-50: #f7f7f7;
+    --grey-100: #eeeeee;
+    --grey-200: #dddddd;
+    --grey-500: #777777;
+    --grey-700: #333333;
+    --border: #d8d8d8;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.prodg-dashboard {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: Inter, sans-serif;
+}
+
+.dashboard-container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dashboard-nav {
+    width: min(1200px, calc(100% - 40px));
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dashboard-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.dashboard-logo strong {
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.dashboard-logo span {
+    color: var(--grey-500);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.dashboard-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.dashboard-nav-right > a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile-button {
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--black);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.profile-arrow {
+    color: var(--grey-500);
+}
+
+.dashboard-section {
+    padding: 90px 0;
+}
+
+.dashboard-black {
+    background: var(--black);
+    color: var(--white);
+}
+
+.dashboard-white {
+    background: var(--white);
+    color: var(--black);
+}
+
+.dashboard-grey {
+    background: var(--grey-50);
+    color: var(--black);
+}
+
+.dashboard-eyebrow {
+    margin: 0 0 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #aaaaaa;
+}
+
+.dashboard-eyebrow.dark {
+    color: var(--grey-500);
+}
+
+.welcome-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 60px;
+}
+
+.welcome-layout h1 {
+    max-width: 800px;
+    margin: 0;
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: .95;
+    letter-spacing: -0.055em;
+}
+
+.welcome-description {
+    max-width: 650px;
+    color: #bcbcbc;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 28px 0 0;
+}
+
+.streak-preview {
+    min-width: 220px;
+    border: 1px solid #333333;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.streak-icon {
+    font-size: 32px;
+}
+
+.streak-preview strong {
+    display: block;
+    font-size: 34px;
+}
+
+.streak-preview span:last-child {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    max-width: 650px;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.section-heading > p {
+    max-width: 360px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.text-link {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.continue-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    border: 1px solid var(--border);
+    background: var(--white);
+}
+
+.course-number {
+    background: var(--black);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+
+.continue-content {
+    padding: 45px;
+}
+
+.course-label {
+    margin: 0 0 10px;
+    color: var(--grey-500);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.continue-content h3 {
+    font-size: 32px;
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+}
+
+.continue-content > p {
+    max-width: 700px;
+    color: var(--grey-700);
+    line-height: 1.7;
+}
+
+.progress-area {
+    max-width: 700px;
+    margin: 30px 0;
+}
+
+.progress-information {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.progress-track {
+    height: 7px;
+    background: var(--grey-200);
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--black);
+}
+
+.dashboard-button {
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.dark-button {
+    background: var(--black);
+    color: var(--white);
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.activity-card {
+    background: var(--white);
+    padding: 35px;
+}
+
+.activity-icon {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.activity-card strong {
+    display: block;
+    font-size: 42px;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+}
+
+.activity-card h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.activity-card p {
+    margin: 0;
+    color: var(--grey-500);
+    line-height: 1.6;
+}
+
+.light-heading h2 {
+    color: var(--white);
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.day-item {
+    min-height: 130px;
+    padding: 20px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day-item span {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.day-item b {
+    font-size: 28px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.learning-card {
+    background: var(--white);
+    color: var(--black);
+    padding: 40px;
+    min-height: 250px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background .2s ease, color .2s ease;
+}
+
+.learning-card:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.learning-card span {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--grey-500);
+    font-size: 12px;
+}
+
+.learning-card h3 {
+    margin: 50px 0 12px;
+    font-size: 28px;
+    letter-spacing: -0.03em;
+}
+
+.learning-card p {
+    max-width: 500px;
+    color: var(--grey-500);
+    line-height: 1.6;
+}
+
+.learning-card:hover p {
+    color: #aaa;
+}
+
+.learning-card b {
+    display: block;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.build-callout {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+}
+
+.build-callout h2 {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(35px, 5vw, 60px);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.build-callout p {
+    max-width: 700px;
+    color: var(--grey-700);
+    line-height: 1.7;
+}
+
+.dashboard-footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 45px 0;
+}
+
+.dashboard-footer .dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+}
+
+.dashboard-footer strong {
+    display: block;
+    font-size: 22px;
+}
+
+.dashboard-footer span {
+    color: #888;
+    font-size: 12px;
+}
+
+.dashboard-footer div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.dashboard-footer p {
+    grid-column: 1 / -1;
+    margin: 20px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+
+    .dashboard-section {
+        padding: 60px 0;
+    }
+
+    .welcome-layout,
+    .build-callout {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .streak-preview {
+        width: 100%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p,
+    .text-link {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .continue-card {
+        grid-template-columns: 1fr;
+    }
+
+    .course-number {
+        min-height: 60px;
+    }
+
+    .continue-content {
+        padding: 28px;
+    }
+
+    .activity-grid,
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .week-grid {
+        overflow-x: auto;
+        grid-template-columns: repeat(7, minmax(90px, 1fr));
+    }
+
+    .dashboard-footer .dashboard-container {
+        display: block;
+    }
+
+    .dashboard-footer div:nth-child(2) {
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+}
